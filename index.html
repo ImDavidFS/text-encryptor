@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>encriptador</title>
+</head>
+<body>
+    <header>
+        <div class="cabecera">
+            <img src="images/logo.png" alt="logo" id="logo">
+        </div>
+    </header>
+
+    <main>
+
+        <div class="entrada">
+            <section>
+                <textarea name="" id="textoDesencriptado" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            </section>
+            <section class="botones">
+                <input type="button" value="ENCRIPTAR" class="encriptar" id="btnEncriptar">
+                <input type="button" value="DESENCRIPTAR" class="desencriptar" id="btnDesencriptar">
+            </section>         
+        </div>
+
+        <div class="rectangle">
+            <section class="mensaje-derecha" id="empty-message">   
+                <img src="images/Muneco.png" alt="muñeco">
+                <p class="texto-vacio">Ningun mensaje fue encontrado</p>
+                <p class="texto-vacio">Ingresa el texto que desea encriptar o desencriptar</p>
+            </section>
+            
+            <section class="mensaje-derecha" id="full-message" >
+                <textarea name="" id="textoEncriptado" cols="30" rows="10" readonly></textarea>
+                <input type="button" value="COPIAR" class="copiar" id="btnCopiar">
+            </section>
+           
+        </div>
+
+    </main>
+
+</body>
+
+<script>
+
+    var btnEncriptar = document.querySelector("#btnEncriptar");
+    btnEncriptar.onclick = encriptar; 
+
+    var btnDesencriptar = document.querySelector("#btnDesencriptar");
+    btnDesencriptar.onclick = desencriptar;
+
+    var btnCopiar = document.querySelector("#btnCopiar");
+    btnCopiar.onclick = copiar;
+
+</script>
+
+</html>
